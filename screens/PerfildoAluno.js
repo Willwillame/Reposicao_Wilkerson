@@ -1,21 +1,14 @@
 import React, {useEffect, useState} from "react";
-import {Text,View, Image, StyleSheet} from "react-native";
+import {Text,View,StyleSheet} from "react-native";
 
-export default function PerfildoAluno({navigation}){
-    const [PerfildoAluno, setPerfildoAluno] = useState([]);
-  
-    useEffect(function(){
-      async function getData(){
-        const response = await fetch('https://mobile.ect.ufrn.br:3004/alunos');
-        const PerfildoAlunoServer = await response.json();
-        setPerfildoAluno(PerfildoAlunoServer)
-      }
-      getData();
-    }, [])
+export default function PerfildoAluno(){
 
     return(
-        <View>Olá </View>
+        <View>
+          <Text>Olá</Text> 
+        </View>
       )
+}
 
 const styles = StyleSheet.create({
     fotoMae:{
